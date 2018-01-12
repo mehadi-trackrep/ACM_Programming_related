@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <strung.h>
+int main()
+{
+	char ara[1000];
+	int i,j,len;
+	
+	return 0;
+}

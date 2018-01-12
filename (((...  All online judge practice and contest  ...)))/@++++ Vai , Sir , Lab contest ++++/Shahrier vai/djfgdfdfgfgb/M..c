@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main()
+{
+    long long arr[110],count,cnt,i,n;
+    scanf("%lld",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%lld",&arr[i]);
+    }
+    cnt=0;
+    count=0;
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]%2==1)
+            cnt++;
+        else
+            count++;
+    }
+    if(cnt==1)
+    {
+        for(i=0;i<n;i++)
+        {
+            if(arr[i]%2==1)
+            {
+                printf("%lld\n",i+1);
+                break;
+            }
+        }
+    }
+    else
+    {
+        for(i=0;i<n;i++)
+        {
+            if(arr[i]%2==0)
+            {
+                printf("%lld\n",i+1);
+                break;
+            }
+        }
+    }
+}
+

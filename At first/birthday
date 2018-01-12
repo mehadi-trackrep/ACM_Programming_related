@@ -1,0 +1,17 @@
+/// Gift a birthday code for you ///
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	int day;
+	char name[20];
+	printf("Please , write your name:\n");
+	gets(name);
+	printf("\nPlease , write your birthday: ");
+	scanf("%d",&day);
+	if(day == 28)
+	    printf("\n\n***Happy Birthday %s***",name);
+	
+	return 0;
+}

@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://www.devskill.com/CodingProblems/ViewProblem/111 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="Dev Skill">
+    <meta property="og:title" content="Chocolates">
+    <meta property="og:url">
+    <meta name="description" property="og:description">
+    <meta property="fb:app_id" content="544015372349322">
+    <meta property="og:image">
+    <meta property="fb:app_id" content="544015372349322">
+    <link rel="shortcut icon" href="http://www.devskill.com/favicon.png">
+    <title>Dev Skill - Chocolates</title>
+    <link href="http://www.devskill.com/Content/site/css/compiled?v=ZN1Ofzb6Uj1wGNxPy7lTUHpwm1OLH2rAMT_cgtViUUI1" rel="stylesheet">
+
+    
+    <link href="./Dev Skill - Chocolates_files/css" rel="stylesheet" type="text/css">
+<style type="text/css"></style><style type="text/css" id="notify-bootstrap">.notifyjs-bootstrap-base {
+  font-weight: bold;
+  padding: 8px 15px 8px 14px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  white-space: nowrap;
+  padding-left: 25px;
+  background-repeat: no-repeat;
+  background-position: 3px 7px;
+}
+.notifyjs-bootstrap-error {
+  color: #B94A48;
+  background-color: #F2DEDE;
+  border-color: #EED3D7;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtRJREFUeNqkVc1u00AQHq+dOD+0poIQfkIjalW0SEGqRMuRnHos3DjwAH0ArlyQeANOOSMeAA5VjyBxKBQhgSpVUKKQNGloFdw4cWw2jtfMOna6JOUArDTazXi/b3dm55socPqQhFka++aHBsI8GsopRJERNFlY88FCEk9Yiwf8RhgRyaHFQpPHCDmZG5oX2ui2yilkcTT1AcDsbYC1NMAyOi7zTX2Agx7A9luAl88BauiiQ/cJaZQfIpAlngDcvZZMrl8vFPK5+XktrWlx3/ehZ5r9+t6e+WVnp1pxnNIjgBe4/6dAysQc8dsmHwPcW9C0h3fW1hans1ltwJhy0GxK7XZbUlMp5Ww2eyan6+ft/f2FAqXGK4CvQk5HueFz7D6GOZtIrK+srupdx1GRBBqNBtzc2AiMr7nPplRdKhb1q6q6zjFhrklEFOUutoQ50xcX86ZlqaZpQrfbBdu2R6/G19zX6XSgh6RX5ubyHCM8nqSID6ICrGiZjGYYxojEsiw4PDwMSL5VKsC8Yf4VRYFzMzMaxwjlJSlCyAQ9l0CW44PBADzXhe7xMdi9HtTrdYjFYkDQL0cn4Xdq2/EAE+InCnvADTf2eah4Sx9vExQjkqXT6aAERICMewd/UAp/IeYANM2joxt+q5VI+ieq2i0Wg3l6DNzHwTERPgo1ko7XBXj3vdlsT2F+UuhIhYkp7u7CarkcrFOCtR3H5JiwbAIeImjT/YQKKBtGjRFCU5IUgFRe7fF4cCNVIPMYo3VKqxwjyNAXNepuopyqnld602qVsfRpEkkz+GFL1wPj6ySXBpJtWVa5xlhpcyhBNwpZHmtX8AGgfIExo0ZpzkWVTBGiXCSEaHh62/PoR0p/vHaczxXGnj4bSo+G78lELU80h1uogBwWLf5YlsPmgDEd4M236xjm+8nm4IuE/9u+/PH2JXZfbwz4zw1WbO+SQPpXfwG/BBgAhCNZiSb/pOQAAAAASUVORK5CYII=);
+}
+.notifyjs-bootstrap-success {
+  color: #468847;
+  background-color: #DFF0D8;
+  border-color: #D6E9C6;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAutJREFUeNq0lctPE0Ecx38zu/RFS1EryqtgJFA08YCiMZIAQQ4eRG8eDGdPJiYeTIwHTfwPiAcvXIwXLwoXPaDxkWgQ6islKlJLSQWLUraPLTv7Gme32zoF9KSTfLO7v53vZ3d/M7/fIth+IO6INt2jjoA7bjHCJoAlzCRw59YwHYjBnfMPqAKWQYKjGkfCJqAF0xwZjipQtA3MxeSG87VhOOYegVrUCy7UZM9S6TLIdAamySTclZdYhFhRHloGYg7mgZv1Zzztvgud7V1tbQ2twYA34LJmF4p5dXF1KTufnE+SxeJtuCZNsLDCQU0+RyKTF27Unw101l8e6hns3u0PBalORVVVkcaEKBJDgV3+cGM4tKKmI+ohlIGnygKX00rSBfszz/n2uXv81wd6+rt1orsZCHRdr1Imk2F2Kob3hutSxW8thsd8AXNaln9D7CTfA6O+0UgkMuwVvEFFUbbAcrkcTA8+AtOk8E6KiQiDmMFSDqZItAzEVQviRkdDdaFgPp8HSZKAEAL5Qh7Sq2lIJBJwv2scUqkUnKoZgNhcDKhKg5aH+1IkcouCAdFGAQsuWZYhOjwFHQ96oagWgRoUov1T9kRBEODAwxM2QtEUl+Wp+Ln9VRo6BcMw4ErHRYjH4/B26AlQoQQTRdHWwcd9AH57+UAXddvDD37DmrBBV34WfqiXPl61g+vr6xA9zsGeM9gOdsNXkgpEtTwVvwOklXLKm6+/p5ezwk4B+j6droBs2CsGa/gNs6RIxazl4Tc25mpTgw/apPR1LYlNRFAzgsOxkyXYLIM1V8NMwyAkJSctD1eGVKiq5wWjSPdjmeTkiKvVW4f2YPHWl3GAVq6ymcyCTgovM3FzyRiDe2TaKcEKsLpJvNHjZgPNqEtyi6mZIm4SRFyLMUsONSSdkPeFtY1n0mczoY3BHTLhwPRy9/lzcziCw9ACI+yql0VLzcGAZbYSM5CCSZg1/9oc/nn7+i8N9p/8An4JMADxhH+xHfuiKwAAAABJRU5ErkJggg==);
+}
+.notifyjs-bootstrap-info {
+  color: #3A87AD;
+  background-color: #D9EDF7;
+  border-color: #BCE8F1;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYFAhkSsdes/QAAA8dJREFUOMvVlGtMW2UYx//POaWHXg6lLaW0ypAtw1UCgbniNOLcVOLmAjHZolOYlxmTGXVZdAnRfXQm+7SoU4mXaOaiZsEpC9FkiQs6Z6bdCnNYruM6KNBw6YWewzl9z+sHImEWv+vz7XmT95f/+3/+7wP814v+efDOV3/SoX3lHAA+6ODeUFfMfjOWMADgdk+eEKz0pF7aQdMAcOKLLjrcVMVX3xdWN29/GhYP7SvnP0cWfS8caSkfHZsPE9Fgnt02JNutQ0QYHB2dDz9/pKX8QjjuO9xUxd/66HdxTeCHZ3rojQObGQBcuNjfplkD3b19Y/6MrimSaKgSMmpGU5WevmE/swa6Oy73tQHA0Rdr2Mmv/6A1n9w9suQ7097Z9lM4FlTgTDrzZTu4StXVfpiI48rVcUDM5cmEksrFnHxfpTtU/3BFQzCQF/2bYVoNbH7zmItbSoMj40JSzmMyX5qDvriA7QdrIIpA+3cdsMpu0nXI8cV0MtKXCPZev+gCEM1S2NHPvWfP/hL+7FSr3+0p5RBEyhEN5JCKYr8XnASMT0xBNyzQGQeI8fjsGD39RMPk7se2bd5ZtTyoFYXftF6y37gx7NeUtJJOTFlAHDZLDuILU3j3+H5oOrD3yWbIztugaAzgnBKJuBLpGfQrS8wO4FZgV+c1IxaLgWVU0tMLEETCos4xMzEIv9cJXQcyagIwigDGwJgOAtHAwAhisQUjy0ORGERiELgG4iakkzo4MYAxcM5hAMi1WWG1yYCJIcMUaBkVRLdGeSU2995TLWzcUAzONJ7J6FBVBYIggMzmFbvdBV44Corg8vjhzC+EJEl8U1kJtgYrhCzgc/vvTwXKSib1paRFVRVORDAJAsw5FuTaJEhWM2SHB3mOAlhkNxwuLzeJsGwqWzf5TFNdKgtY5qHp6ZFf67Y/sAVadCaVY5YACDDb3Oi4NIjLnWMw2QthCBIsVhsUTU9tvXsjeq9+X1d75/KEs4LNOfcdf/+HthMnvwxOD0wmHaXr7ZItn2wuH2SnBzbZAbPJwpPx+VQuzcm7dgRCB57a1uBzUDRL4bfnI0RE0eaXd9W89mpjqHZnUI5Hh2l2dkZZUhOqpi2qSmpOmZ64Tuu9qlz/SEXo6MEHa3wOip46F1n7633eekV8ds8Wxjn37Wl63VVa+ej5oeEZ/82ZBETJjpJ1Rbij2D3Z/1trXUvLsblCK0XfOx0SX2kMsn9dX+d+7Kf6h8o4AIykuffjT8L20LU+w4AZd5VvEPY+XpWqLV327HR7DzXuDnD8r+ovkBehJ8i+y8YAAAAASUVORK5CYII=);
+}
+.notifyjs-bootstrap-warn {
+  color: #C09853;
+  background-color: #FCF8E3;
+  border-color: #FBEED5;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABJlBMVEXr6eb/2oD/wi7/xjr/0mP/ykf/tQD/vBj/3o7/uQ//vyL/twebhgD/4pzX1K3z8e349vK6tHCilCWbiQymn0jGworr6dXQza3HxcKkn1vWvV/5uRfk4dXZ1bD18+/52YebiAmyr5S9mhCzrWq5t6ufjRH54aLs0oS+qD751XqPhAybhwXsujG3sm+Zk0PTwG6Shg+PhhObhwOPgQL4zV2nlyrf27uLfgCPhRHu7OmLgAafkyiWkD3l49ibiAfTs0C+lgCniwD4sgDJxqOilzDWowWFfAH08uebig6qpFHBvH/aw26FfQTQzsvy8OyEfz20r3jAvaKbhgG9q0nc2LbZxXanoUu/u5WSggCtp1anpJKdmFz/zlX/1nGJiYmuq5Dx7+sAAADoPUZSAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfdBgUBGhh4aah5AAAAlklEQVQY02NgoBIIE8EUcwn1FkIXM1Tj5dDUQhPU502Mi7XXQxGz5uVIjGOJUUUW81HnYEyMi2HVcUOICQZzMMYmxrEyMylJwgUt5BljWRLjmJm4pI1hYp5SQLGYxDgmLnZOVxuooClIDKgXKMbN5ggV1ACLJcaBxNgcoiGCBiZwdWxOETBDrTyEFey0jYJ4eHjMGWgEAIpRFRCUt08qAAAAAElFTkSuQmCC);
+}
+</style><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_editor.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style type="text/css" id="core-notify">.notifyjs-corner {
+  position: fixed;
+  margin: 5px;
+  z-index: 1050;
+}
+
+.notifyjs-corner .notifyjs-wrapper,
+.notifyjs-corner .notifyjs-container {
+  position: relative;
+  display: block;
+  height: inherit;
+  width: inherit;
+  margin: 3px;
+}
+
+.notifyjs-wrapper {
+  z-index: 1;
+  position: absolute;
+  display: inline-block;
+  height: 0;
+  width: 0;
+}
+
+.notifyjs-container {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  cursor: pointer;
+}
+
+.notifyjs-text {
+  position: relative;
+}
+
+.notifyjs-arrow {
+  position: absolute;
+  z-index: 2;
+  width: 0;
+  height: 0;
+}</style><script src="./Dev Skill - Chocolates_files/mode-c_cpp.js"></script></head>
+
+<body>
+
+    <input class="response-message" type="hidden" value="">
+<input class="response-type" type="hidden" value="">
+<input class="response-duration" type="hidden" value="5000">
+
+
+
+
+    <div class="container page-wrap">
+
+        <div class="row-fluid">
+    <div class="span12">
+        <div class="header">
+            <div class="row-fluid">
+                <div class="span3 pull-left">
+                    <div class="logo">
+                        <a href="http://www.devskill.com/Home" title="Dev Skill logo">
+                            <img src="./Dev Skill - Chocolates_files/logo-beta2x.png" alt="Dev Skill" width="180" height="32">
+                        </a>
+                    </div>
+                </div>
+                <div class="span9 ">
+                    <ul class="nav nav-pills menu pull-right l_tinynav1" id="responsive_nav">
+                        <li><a href="http://www.devskill.com/Home"><i class="icon-home text-warning"></i>Home</a></li>
+                        <li><a href="http://www.devskill.com/NewContest"><i class="icon-trophy text-warning"></i>Contest</a></li>
+                        <li><a href="http://www.devskill.com/CodingProblems"><i class="icon-puzzle-piece text-warning"></i>Problem Archive</a></li>
+                        
+                        <li><a href="http://www.devskill.com/TopMembers"><i class="icon-sort-by-attributes-alt text-warning"></i>Ranking</a></li>
+                        
+                        
+                        <li><a href="http://www.forum.devskill.com/" target="_blank"><i class="icon-comments text-warning"></i>Forum</a></li>
+                        
+                        <li><a href="http://www.devskill.com/Shop"><i class="icon-bullseye text-warning"></i>Shop</a></li>
+                        <li><a style="padding:8px 0 0;color:#666;">|</a></li>
+                        
+                            <li class="user"><a href="http://www.devskill.com/MyAccount/Profile"><i class="icon-user text-warning"></i>My Account &nbsp;<i class="icon-caret-down muted"></i> <span class="badge badge-info messageCount">4</span></a>
+                                <ul class="sub-menu" style="width: 160px;">
+                                    <li><a href="http://www.devskill.com/MyAccount/Profile"><i class="icon-puzzle-piece"></i>Profile</a></li>
+                                    <li>
+                                        <a href="http://www.devskill.com/MyAccount/Profile/ChangePassword"><i class="icon-key"></i>Change Password</a>
+                                    </li>
+                                    <li><a href="http://www.devskill.com/MyAccount/Message"><i class="icon-envelope-alt"></i>Inbox <span class="badge badge-info messageCount">4</span></a></li>
+                                    <li><a href="http://www.devskill.com/Home/Logout"><i class="icon-power-off text-error"></i>Logout</a></li>
+                                </ul>
+                            </li>
+
+                    </ul><select id="tinynav1" class="tinynav tinynav1"><option>Menu</option><option value="/Home">Home</option><option value="/NewContest">Contest</option><option value="/CodingProblems">Problem Archive</option><option value="/TopMembers">Ranking</option><option value="http://www.forum.devskill.com">Forum</option><option value="/Shop">Shop</option><option value="undefined">|</option><option value="/MyAccount/Profile">My Account &nbsp; 4</option><option value="/MyAccount/Profile">- Profile</option><option value="/MyAccount/Profile/ChangePassword">- Change Password</option><option value="/MyAccount/Message">- Inbox 4</option><option value="/Home/Logout">- Logout</option></select>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+<div class="row-fluid">
+    <div class="span8">
+
+        <div class="padder-large">
+            <h1 class="page-title">Chocolates <a class="pull-right small_font" href="http://www.devskill.com/CodingProblems/"><i class="icon-reply"></i> Back to All Problems</a></h1>
+            <p class="muted small_font">
+                <span class="label label-info">Easy</span>
+            <span>Math</span> &gt; <span>Basic Math</span></p>
+            <hr>
+            <p class="mark-down-html"><p>Your father give you n chocholates.you go to the school and you will now play with this chocolates...........
+you decorate them in a good way like below</p>
+
+<pre class="prettyprint linenums"><code>                             c
+                            c c
+                           c c c
+                          c c c c
+                         c c c c c
+                        c c c c c c
+</code></pre>
+
+<p>Now you have to calculate the number of lines <strong>l</strong> formed by your chocolates.if you cant complete a line then that line will be removed and eat the remaining chocolates.</p>
+
+<h2>Input:</h2>
+
+<p>The first line of input will be an integer <strong>t</strong> number of test case.
+next <strong>t</strong> lines contain an integer <strong>N</strong> the number of chocolates.</p>
+
+<h2>Output:</h2>
+
+<p>Print the number of lines <strong>l</strong> on the first line
+and then the number of chocolates you eat on the next line.</p>
+
+<h2>Constrains</h2>
+
+<p>1&lt;=t&lt;=100
+1&lt;=N&lt;=10^18</p>
+
+<h2>Sample Input</h2>
+
+<pre class="prettyprint linenums"><code>2
+10
+22
+</code></pre>
+
+<h2>Sample Output</h2>
+
+<pre class="prettyprint linenums"><code>4
+0
+6
+1
+</code></pre></p>
+            <hr>
+            <h6 style="text-align:right">Problem Setter: <br><a href="http://www.devskill.com/Home/PublicProfile/Animesh123" target="_blank" class="text-warning"><img src="./Dev Skill - Chocolates_files/f48259bb-65c3-4a8d-9f14-bc5926797969_deb5a7905a2040b29d2aeaa07897d1fa_W185xH0.jpg" width="76"><br>Animesh Khashkel</a></h6>
+            <hr>
+                <form method="post" action="./Dev Skill - Chocolates_files/Dev Skill - Chocolates.htm">
+                    <input name="__RequestVerificationToken" type="hidden" value="2qPmZ_gyNxP3HCKJYHDy-nkYmmORtsiOcypQXT2JCwg5lFvd-wsJtlqePfRsmsTmd3TwYIjxFOOTQ9yNh3lmMrUBhjxm97YQPnYrhV3CBvsgcTkcshVZgd0kWtIP07SI0">
+                    <input data-val="true" data-val-required="The CodingProblemID field is required." id="id" name="CodingProblemID" type="hidden" value="36d4c597-e69e-c199-7536-08d3bd054eda">
+                    <input data-val="true" data-val-number="The field CodeName must be a number." data-val-required="The CodeName field is required." id="CodeName" name="CodeName" type="hidden" value="111">
+                    <label>Select Language</label>
+                    <select id="languages" name="Language">
+                        <option value="7">C/C++</option>
+                        <option value="3">PHP</option>
+                        <option value="10">C#</option>
+                        <option value="8">Java</option>
+                    </select>
+                    <div id="editor" class="input-block-level ace_editor ace-tm" style="height:400px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 14px; width: 7px; left: 44px; top: 0px;"></textarea><div class="ace_gutter"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 428px; width: 40px;"><div class="ace_gutter-cell " style="height: 14px;">1</div><div class="ace_gutter-cell " style="height: 14px;">2</div><div class="ace_gutter-cell " style="height: 14px;">3</div><div class="ace_gutter-cell " style="height: 14px;">4<span class="ace_fold-widget ace_start ace_open" style="height: 14px;"></span></div><div class="ace_gutter-cell " style="height: 14px;">5</div><div class="ace_gutter-cell " style="height: 14px;">6</div><div class="ace_gutter-cell " style="height: 14px;">7</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 14px;"></div></div><div class="ace_scroller" style="left: 40px; right: 0px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 608px; height: 428px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 564px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:14px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:14px"><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;iostream&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_keyword ace_control">using</span> <span class="ace_keyword ace_operator">namespace</span> <span class="ace_identifier">std</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14px"></div><div class="ace_line" style="height:14px"><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14px">    <span class="ace_comment">// your code goes here</span></div><div class="ace_line" style="height:14px">    <span class="ace_keyword ace_control">return</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14px"><span class="ace_paren ace_rparen">}</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 7px; height: 14px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 98px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 40px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 648px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+                    <input id="code" name="Code" type="hidden" value="#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+	// your code goes here
+	return 0;
+}">
+                    <br>
+                    <button type="submit" class="btn btn-large btn-primary" style="width:200px;">Submit</button>
+                </form>
+                <br>
+                <br>
+                    <table id="submissions" style="" class="table table-hover">
+                        <tbody>
+                            
+                            
+                            
+                            
+                    <tr><th>Date-time</th><th>Status</th><th>Timing</th><th>Error</th></tr><tr><td>13-08-2016 | 09:20 PM</td><td><span class="label label-important">WrongAnswer</span> </td><td>0.49s</td><td><input type="button" class="btn btn-small viewError" value="View Erorr"><input type="hidden" class="error" value="/usercode/file.cpp: In function &#39;int main()&#39;:
+/usercode/file.cpp:79:48: warning: format &#39;%d&#39; expects argument of type &#39;int*&#39;, but argument 2 has type &#39;long long int*&#39; [-Wformat=]
+ #define sf1ll(a)              scanf(&quot;%I64d&quot;, &amp;a)
+                                                ^
+/usercode/file.cpp:112:9: note: in expansion of macro &#39;sf1ll&#39;
+         sf1ll(N);
+         ^
+"></td></tr><tr><td>13-08-2016 | 09:39 PM</td><td><span class="label label-success">Accepted</span> </td><td>0.35s</td><td></td></tr><tr><td>13-08-2016 | 10:42 PM</td><td><span class="label label-success">Accepted</span> </td><td>0.48s</td><td></td></tr><tr><td>13-08-2016 | 10:42 PM</td><td><span class="label label-success">Accepted</span> </td><td>0.49s</td><td></td></tr></tbody></table>
+        </div>
+    </div>
+
+    <div class="span4">
+        <div class="widget">
+            <h3 class="widgettitle">Problem Stats</h3>
+            <h1><span class="text-success">91</span>/226</h1>
+            <p class="muted small_font">Solve/Submission</p>
+        </div>
+        <div class="widget">
+            <h3 class="widgettitle">Ranking</h3>
+            <table class="list_table table-hover">
+                <tbody><tr>
+                    <th style="font-size:8pt">#</th>
+                    <th style="font-size:8pt">User</th>
+                    <th style="font-size:8pt">Language</th>
+                    <th style="font-size:8pt">Timing</th>
+                </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">01</td>
+                        <td style="font-size:8pt">orpib</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.09s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">02</td>
+                        <td style="font-size:8pt">prodip_bsmrstu</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.09s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">03</td>
+                        <td style="font-size:8pt">subhashis_cse</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.09s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">04</td>
+                        <td style="font-size:8pt">broken_horse</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.23s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">05</td>
+                        <td style="font-size:8pt">MaknunLakme</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.23s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">06</td>
+                        <td style="font-size:8pt">MASUDUR_RAHMAN</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.24s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">07</td>
+                        <td style="font-size:8pt">Zeronfinity</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.31s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">08</td>
+                        <td style="font-size:8pt">abuasifkhan</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.32s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">09</td>
+                        <td style="font-size:8pt">mtmohim</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.32s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">10</td>
+                        <td style="font-size:8pt">amin21</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.35s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">11</td>
+                        <td style="font-size:8pt">mehadi_sust</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.35s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">12</td>
+                        <td style="font-size:8pt">dipta007</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.35s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">13</td>
+                        <td style="font-size:8pt">shishir_hstu</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.35s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">14</td>
+                        <td style="font-size:8pt">underSpirit</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.36s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">15</td>
+                        <td style="font-size:8pt">mamun4122</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.37s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">16</td>
+                        <td style="font-size:8pt">ssavi</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.47s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">17</td>
+                        <td style="font-size:8pt">Koushik_12</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.47s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">18</td>
+                        <td style="font-size:8pt">mahbubcseju</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.47s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">19</td>
+                        <td style="font-size:8pt">rafsan_rana</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.48s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">20</td>
+                        <td style="font-size:8pt">raihatneloy</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.48s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">21</td>
+                        <td style="font-size:8pt">Foyaz05</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.48s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">22</td>
+                        <td style="font-size:8pt">ahmrf</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.48s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">23</td>
+                        <td style="font-size:8pt">Stormraider</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.48s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">24</td>
+                        <td style="font-size:8pt">Tahmid</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.48s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">25</td>
+                        <td style="font-size:8pt">sifat_117</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.48s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">26</td>
+                        <td style="font-size:8pt">nmunim</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.48s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">27</td>
+                        <td style="font-size:8pt">rash29</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.48s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">28</td>
+                        <td style="font-size:8pt">xpo6</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.48s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">29</td>
+                        <td style="font-size:8pt">ksohan</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.48s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">30</td>
+                        <td style="font-size:8pt">abid1</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.48s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">31</td>
+                        <td style="font-size:8pt">AshikeRuet12</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.48s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">32</td>
+                        <td style="font-size:8pt">ehsan_sshuvo</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">33</td>
+                        <td style="font-size:8pt">Mohtasim</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">34</td>
+                        <td style="font-size:8pt">ronok_cse</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">35</td>
+                        <td style="font-size:8pt">rabiul_awal</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">36</td>
+                        <td style="font-size:8pt">nasif2587</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">37</td>
+                        <td style="font-size:8pt">sohag_hstu</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">38</td>
+                        <td style="font-size:8pt">faisal47</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">39</td>
+                        <td style="font-size:8pt">EWU_FatimaTasnim</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">40</td>
+                        <td style="font-size:8pt">ProKawsar</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">41</td>
+                        <td style="font-size:8pt">murad_al_wajed</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">42</td>
+                        <td style="font-size:8pt">Flash_DS</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">43</td>
+                        <td style="font-size:8pt">sarafinmahtab</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">44</td>
+                        <td style="font-size:8pt">Tanmoy1228</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">45</td>
+                        <td style="font-size:8pt">clcrr</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">46</td>
+                        <td style="font-size:8pt">mamun</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">47</td>
+                        <td style="font-size:8pt">kanon2</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">48</td>
+                        <td style="font-size:8pt">sahedsohel</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">49</td>
+                        <td style="font-size:8pt">Mahmudul_Tushar</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.49s</td>
+                    </tr>
+                    <tr style="font-size:8pt">
+                        <td style="font-size:8pt">50</td>
+                        <td style="font-size:8pt">shipon0142</td>
+                        <td style="font-size:8pt">Cpp</td>
+                        <td style="font-size:8pt">0.50s</td>
+                    </tr>
+            </tbody></table>
+        </div>
+    </div>
+</div>
+
+<!-- BEGIN BOOTSTRAP VIEW ERROR MODAL -->
+<div id="errorModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Error Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <br>
+                <pre id="content"></pre>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END BOOTSTRAP MODAL-->
+
+
+
+
+        
+    </div>
+
+    <div class="container footer_bottom">
+        
+<div class="footer">
+    <div class="row-fluid">
+        <div class="span6">
+            <ul class="sc-list inline">
+                <li><a href="http://www.devskill.com/ContactUs">Contact Us</a></li>
+                <li><a href="http://blog.devskill.com/" target="_blank">Blog</a></li>
+                <li><a href="http://www.devskill.com/faq">FAQ</a></li>
+                <li><a href="http://www.devskill.com/home/terms">Terms</a></li>
+                <li><a href="http://www.devskill.com/home/privacy">Privacy</a></li>
+            </ul>
+            <p class="footer_info">
+                Copyright © 2015-2016 Dev Skill.
+
+            </p>
+        </div>
+        <div class="span6">
+            <ul class="sc-list pull-right inline">
+                <li><h5>Find Us on:</h5></li>
+                <li><a href="https://facebook.com/devskillbd" class="fb_icon" target="_blank"><i class="icon-facebook-sign icon-2x"></i></a></li>
+                <li><a href="https://youtube.com/user/devskillvideo" class="youtube_icon" target="_blank"><i class="icon-youtube icon-2x"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+    </div>
+
+    
+
+    <!-- Feedback form -->
+    <div id="feedbackForm" class="padder feedback_form hidden-phone">
+        <a href="javascript:void(0)" class="feedback_btn">Feedback</a>
+        <h4>Your feedback is our precious!</h4>
+        <hr>
+        <form class="" id="enquiry-form" enctype="multipart/form-data">
+            <label>Feedback Type <span class="text-error">*</span></label>
+            <select class="input-block-level" name="FeedbackType" id="FeedbackType" data-validate="required">
+                <option value="General">General</option>
+                <option value="FeatureRequest">Feature request</option>
+                <option value="Ideas">Ideas</option>
+                <option value="BugReport">Bug Report</option>
+                <option value="ux">Design &amp; UX improvement</option>
+                <option value="AskQuestion">Ask Question</option>
+                <option value="NeedHelp">Need Help</option>
+            </select>
+            <label>Description <span class="text-error">*</span></label>
+            <textarea class="input-block-level" rows="5" name="Description" id="Description" data-validate="required"></textarea>
+            <label>Can you provide a screenshot?</label>
+
+            <input type="file" class="input-block-level" id="imgUploadFeedback" name="Screenshot">
+            <a></a>
+            
+
+            <span id="statusFeedback"></span>
+
+            <br>
+
+            
+
+            <label>Email <span class="text-error">*</span></label>
+            
+            <input type="text" class="input-block-level" name="Email" id="Email" data-validate="required,email" value="">
+            <label>Phone <span class="muted">(optional)</span></label>
+            <input type="text" class="input-block-level" name="Phone" id="Phone" placeholder="01XXX XXX XXX" data-validate="bdPhone">
+            <label>Username <span class="muted">(optional)</span></label>
+            <input type="text" class="input-block-level" name="DevID" id="DevID" value="mehadi_sust">
+            <button type="button" class="btn btn-success btn-large" id="submitFeedback">Submit Feedback</button>
+            <button type="button" class="btn btn-large" onclick="hideFeedback()">Cancel</button>
+            <h6 class="muted support_phone">Or call +88 02 9853138 for support</h6>
+        </form>
+
+        <div id="loader" style="height: 200px; display: none"></div>
+
+        <div class="form_submitted" style="display: none">
+            <h2 class="text-center text-success">Thank you for providing feedback! Our developers will be happy :)</h2>
+            <div class="text-center">
+                <button class="btn btn-success" type="button" onclick="hideFeedback()">Close</button>
+            </div>
+        </div>
+        <div class="form_error" style="display: none">
+            <h2 id="feedback_error_text" class="text-center text-error">Sorry there was a problem when submitting the feedback. Please try again. :(</h2>
+            <div class="text-center">
+                <button class="btn btn-success" type="button" onclick="showFeedback()">Try Again</button>
+            </div>
+        </div>
+    </div>
+    <div id="tempDiv"></div>
+
+    <div class="modal-backdrop fade in" style="display: none; -moz-transition: ease-in-out opacity; -o-transition: ease-in-out opacity; -webkit-transition: ease-in-out opacity; transition: ease-in-out opacity;"></div>
+
+    <!-- Feedback form End -->
+
+    <!-- Modal for General Purpose Message -->
+    <div class="modal hide fade" id="permissionDenied">
+        <div class="modal-body row-fluid">
+        </div>
+    </div>
+    <!-- Modal for General Purpose Message -->
+
+    <div id="deleteModal" class="modal fade hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 id="myModalLabel">Are you sure you want to delete this?</h3>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                    <a class="btn btn-danger" id="confirmDeleteBtn" href="">Confirm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" id="LoggedEmail" value="mehadi541@gmail.com">
+    <input type="hidden" id="LoggedUsername" value="mehadi_sust">
+
+    <!-- **jQuery** -->
+    <script async="" src="./Dev Skill - Chocolates_files/analytics.js"></script><script src="./Dev Skill - Chocolates_files/firstblock"></script>
+
+
+    <script>
+        var objBottomFeedback;
+        var readerFeedback;
+
+        $(function () {
+            if ($(".response-message").val()) {
+                var message = $(".response-message").val();
+                var type = $(".response-type").val();
+                var duartion = $(".response-duration").val();
+                noty({ text: message, type: type, timeout: 5000 });
+            }
+        }());
+
+        $(document).ready(function () {
+
+            var target = document.getElementById('loader');
+            var spinner = null;
+
+            $("#submitFeedback").click(function (event) {
+
+                event.preventDefault();
+
+                $("#enquiry-form").validate(function (success) {
+                    if (success) {
+
+                        var file = document.getElementById('imgUploadFeedback').files[0];
+
+                        if (file != undefined && file.size >= 1024 * 1024 * 1) {
+                            $("#imgUploadFeedback").notify("Provide an image less than 1MB.");
+                            //$("#imgUploadFeedback").val('');
+                        }
+                        else {
+                            var formData = new FormData();
+                            formData.append('FeedbackType', $("#FeedbackType").val());
+                            formData.append('Description', $("#Description").val());
+                            formData.append('Email', $("#Email").val());
+                            formData.append('Phone', $("#Phone").val());
+                            formData.append('DevID', $("#DevID").val());
+
+                            if (file != undefined) {
+                                formData.append(file.name, file);
+                            }
+
+                            $.ajax({
+                                url: "/Home/CreateFeedback",
+                                type: "POST",
+                                dataType: "json",
+                                contentType: false,
+                                processData: false,
+                                cache: false,
+                                data: formData,
+                                beforeSend: function (xhr) {
+                                    $("#loader").show();
+                                    $("#enquiry-form").hide();
+                                    $(".form_submitted").hide();
+                                    $(".form_error").hide();
+                                    spinner = new Spinner().spin(target);
+                                }
+                            })
+                            .done(function (data) {
+                                if (data.status) { //=== "success") {
+                                    $(".form_submitted").show();
+                                }
+                                else {
+                                    $("#feedback_error_text").html(data.message);
+                                    $(".form_error").show();
+                                }
+                            })
+                            .fail(function () {
+                                var message = "Sorry there was a problem when submitting the feedback. Please try again. :(";
+                                $("#feedback_error_text").html(message);
+                                $(".form_error").show();
+                            })
+                            .always(function () {
+                                spinner.stop();
+                            });
+                        }
+                    }
+                });
+
+                event.preventDefault();
+                return false;
+            });
+
+            //hljs.configure({ tabReplace: '    ' }); // 4 spaces
+            //hljs.initHighlightingOnLoad();
+
+        });
+
+
+        var feedbackOpen = false;
+        $(".feedback_btn").click(function () {
+            if (!feedbackOpen) {
+
+                showFeedback();
+            }
+            else {
+                hideFeedback();
+            }
+        });
+
+        function showFeedback() {
+            $("#loader").hide();
+            $(".form_submitted").hide();
+            $(".form_error").hide();
+            $("#enquiry-form").show();
+            $("#FeedbackType").val("General");
+            $("#Description").val("");
+            $("#Email").val($("#LoggedEmail").val());
+            $("#DevID").val($("#LoggedUsername").val());
+            $("#imgUploadFeedback").val("");
+            $("#statusFeedback").html("");
+            $("#feedbackForm").animate({
+                right: "0"
+            });
+            feedbackOpen = true;
+            $(".modal-backdrop").fadeIn();
+        }
+
+        function hideFeedback() {
+
+            $("#feedbackForm").animate({
+                right: "-350px"
+            });
+            feedbackOpen = false;
+            $(".modal-backdrop").fadeOut();
+        }
+
+
+        $('.medals a').tooltip();
+
+        $(function () {
+            $("#responsive_nav").tinyNav({
+                header: 'Menu'
+            }
+                );
+        });
+
+        $.fn.clearForm = function () {
+            return this.each(function () {
+                var type = this.type, tag = this.tagName.toLowerCase();
+                //alert(type);
+                if (tag == 'form')
+                    return $(':input', this).clearForm();
+                if (type == 'text' || type == 'password' || tag == 'textarea')
+                    this.value = '';
+                else if (type == 'checkbox' || type == 'radio')
+                    this.checked = false;
+                else if (tag == 'select')
+                    this.selectedIndex = 0;
+                else if (tag == 'number')
+                    this.value = '0';
+            });
+        };
+
+        
+        /*
+        $.xhrPool = [];
+        $.xhrPool.abortAll = function () {
+            $(this).each(function (idx, jqXHR) {
+                jqXHR.abort();
+            });
+            $.xhrPool = [];
+        };
+
+        (function () {
+            $.ajaxSetup({
+                beforeSend: function (jqXHR) {
+                    $.xhrPool.push(jqXHR);
+                },
+                complete: function (jqXHR) {
+                    var index = $.xhrPool.indexOf(jqXHR);
+                    if (index > -1) {
+                        $.xhrPool.splice(index, 1);
+                    }
+                }
+            });
+        }); */
+    </script>
+
+    <script src="./Dev Skill - Chocolates_files/secondblock"></script>
+
+    
+    <script src="./Dev Skill - Chocolates_files/Markdown.Converter.js" type="text/javascript"></script>
+    <script src="./Dev Skill - Chocolates_files/Markdown.Sanitizer.js" type="text/javascript"></script>
+    <script src="./Dev Skill - Chocolates_files/Markdown.Editor-BS3.js" type="text/javascript"></script>
+    <script src="./Dev Skill - Chocolates_files/ace.js" type="text/javascript"></script>
+
+    <script>
+        var converter = Markdown.getSanitizingConverter();
+        $(".mark-down-html").each(function (index, value) {
+            $(this).html(converter.makeHtml($(this).text()));
+        });
+
+        /******************************************************************************
+                    Code Editor Initialization
+        ******************************************************************************/
+        var lang_map = {
+            0: "python",
+            1: "ruby",
+            2: "clojure",
+            3: "php",
+            4: "javascript",
+            5: "scala",
+            6: "golang",
+            7: "c_cpp",
+            8: "java",
+            9: "vb",
+            10: "csharp",
+            11: "sh",
+            12: "c_cpp",
+            13: "sql",
+            14: "perl"
+        };
+
+        function loadEditor(lang_id) {
+            var syn = "text";
+            if (lang_map[lang_id] != undefined) {
+                syn = lang_map[lang_id];
+            }
+
+            var editor = ace.edit("editor");
+            editor.setValue("");
+            //editor.setTheme("ace/theme/katzenmilch");
+            editor.getSession().modeName = '/gfx/ace/src/' + syn;
+            editor.getSession().setMode("ace/mode/" + syn);
+            editor.getSession().setUseSoftTabs(false);
+            editor.renderer.setHScrollBarAlwaysVisible(false);
+            editor.resize();
+            editor.getSession().on('change', function (e) {
+                var value = editor.getValue();
+                $("#code").val(value);
+            });
+
+            getLanguageTemplate(lang_id, editor);
+            editor.focus();
+        }
+
+        function getLanguageTemplate(lang_id, editor) {
+            $.ajax({
+                url: "/CodingProblems/GetLanguageTemplate/" + lang_id,
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json",
+                cache: false
+            })
+            .done(function (data) {
+                if (data.status == "success") {
+                    editor.getSession().setValue(data.template);
+                    $("#code").val(editor.getValue());
+                }
+            })
+            .fail(function () {
+            })
+            .always(function () {
+            });
+        }
+
+        $(document).ready(function () {
+            loadEditor($("#languages").val());
+            refreshSubmission();
+        });
+
+        $("#languages").change(function () {
+            loadEditor($(this).val());
+        });
+
+        function refreshSubmission() {
+            var tid = setInterval(checkResult, 15000);
+            function checkResult() {
+                var jsonData = { problemID: $("#id").val() };
+                $.ajax({
+                    url: "/CodingProblems/CheckMySubmissions",
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json",
+                    data: JSON.stringify(jsonData),
+                    cache: false
+                })
+                .done(function (data) {
+                    if (data.status == "success") {
+                        $("#submissions").find("tr").remove();
+                        $("#submissions").append("<tr><th>Date-time</th><th>Status</th><th>Timing</th><th>Error</th></tr>");
+                        for (var i = 0; i < data.results.length; i++) {
+                            var content = "<tr><td>" + data.results[i].datetime + "</td><td>" + data.results[i].status + "</td><td>" + data.results[i].time + "</td>";
+                            if (data.results[i].error)
+                                content += "<td><input type='button' class='btn btn-small viewError' value='View Erorr' /><input type='hidden' class='error' value='" + data.results[i].error + "' /></td></tr>";
+                            else
+                                content += "<td></td></tr>";
+
+                            $("#submissions").append(content);
+                        }
+                    }
+                })
+                .fail(function () {
+                })
+                .always(function () {
+                });
+            }
+        }
+
+        $('#submissions').on('click', '.viewError', function (event) {
+            var error = $(this).parent("td").children("input[type='hidden']").val();
+            $("#content").html(error);
+            $("#errorModal").modal();
+        });
+
+    </script>
+
+    
+
+    <script type="text/javascript">
+        // Google analytics code
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-23675202-5', 'auto');
+        ga('send', 'pageview');
+        // End of Google analytics code
+
+    </script>
+
+
+</body></html>

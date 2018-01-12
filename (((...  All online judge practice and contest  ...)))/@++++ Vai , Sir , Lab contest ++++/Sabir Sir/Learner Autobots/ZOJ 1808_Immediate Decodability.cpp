@@ -1,0 +1,101 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+struct data{
+    string str;
+    int len;
+    bool operator < (const data &p)const    ///AC
+    {
+        return len < p.len;
+    }
+};
+
+vector <data> v;
+
+int main()
+{
+    string str;
+    int t=0;
+    while(cin >> str)
+    {
+        v.clear();
+
+        int len = str.length();
+        data get;
+        get.len = len;
+        get.str = str;
+        v.push_back(get);
+
+        t++;
+
+        while(cin >> str)
+        {
+            if(str == "9")
+            {
+                break;
+            }
+
+            int len = str.length();
+            data get;
+            get.len = len;
+            get.str = str;
+            v.push_back(get);
+
+        }
+
+        vector <data> :: iterator it;
+        vector <data> :: iterator it1;
+
+        int ck1;
+
+        for(it = v.begin(); it!=v.end(); it++)
+        {
+            int ck = 0;
+            data get = *it;
+
+            string str = get.str;
+            int len = get.len;
+
+            for(it1 = it+1; it1 != v.end(); it1++)
+            {
+                data get1 = *it1;
+                string str1 = get1.str;
+                int len1 = get1.len;
+                ck1 = 1;
+                for(int i=0; i<len; i++)
+                {
+                    if(str[i] != str1[i])
+                    {
+                        ck1 = 0;
+                        break;
+                    }
+                }
+                if(ck1 == 1) break;
+            }
+
+            if(ck1 == 1) break;
+        }
+
+        if(ck1 == 1)
+            printf("Set %d is not immediately decodable\n",t);
+        else
+            printf("Set %d is immediately decodable\n",t);
+    }
+
+    return 0;
+}
+
+/*
+
+01
+10
+0010
+0000
+9
+01
+10
+010
+0000
+9
+
+*/
