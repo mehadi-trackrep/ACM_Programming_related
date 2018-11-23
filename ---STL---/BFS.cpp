@@ -1,12 +1,9 @@
 #include <bits/stdc++.h>
-#include <iostream>
-#include <cstdio>
-#include <vector>
-#include <queue>
-#include <algorithm>
 using namespace std;
+
 int vis[10000],lev[10000],par[100000];
 vector <int> vec[100];
+
 int bfs(int s,int e)
 {
     queue <int > q;
@@ -33,6 +30,7 @@ int bfs(int s,int e)
     }
     return lev[e];
 }
+
 int main()
 {
 
@@ -43,11 +41,11 @@ int main()
     memset(lev,0,sizeof(lev));
     int u,v;
     for(int i = 0;i < n;i++)
-        {
-            cin>>u>>v;
-            vec[u].push_back(v);
-            vec[v].push_back(u);
-        }
+    {
+        cin>>u>>v;
+        vec[u].push_back(v);
+        vec[v].push_back(u);
+    }
     int ans=bfs(1,6);
 
     printf("%d\n",ans);
@@ -60,6 +58,7 @@ int main()
     }
     printf("\n");
 }
+
 /*
 8
 1 2

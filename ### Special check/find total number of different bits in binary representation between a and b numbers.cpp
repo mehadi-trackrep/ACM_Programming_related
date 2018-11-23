@@ -115,7 +115,8 @@ int main()
 
     while(cin >> a >> b)
     {
-        int temp = a^b; //cerr << temp << endl;
+        int temp = a^b;
+        cerr << temp << endl;
         int cnt = 0;
         while(temp)
         {

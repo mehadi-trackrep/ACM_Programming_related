@@ -87,7 +87,7 @@ void MST()
     }
 }
 
-int main()
+int main()              ///AC
 {
     int tcas,c=1;
 

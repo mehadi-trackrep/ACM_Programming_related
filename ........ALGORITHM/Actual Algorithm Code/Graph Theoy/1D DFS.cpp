@@ -65,7 +65,7 @@ int main()
             if(visit[i]) cnt++;
         }
 
-        printf("vertices connected with %d is %d\n", v, cnt);
+        printf("Total vertices connected with %d is: %d\n", v, cnt);
     }
 
     return 0;

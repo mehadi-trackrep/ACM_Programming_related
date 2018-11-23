@@ -150,7 +150,7 @@ int level[sz];
 void bfs(int SN)
 {
     queue <int> q;
-    for(int i=0; i<sz; i++) level[i] = -1;       /// level re visit and level hishebe indicate korbo :)
+    for(int i=0; i<sz; i++) level[i] = -1;       /// level re eki sathe visit and level hishebe indicate korbo :)
     level[SN] = 0;
     parent[SN] = SN;
     q.push(SN);
@@ -204,14 +204,13 @@ int main()
 1
 ...............or,
 
-5 7
+7 6
 1 2
-2 3
-2 4
+1 3
 1 4
-4 3
-4 5
-1 5
+2 5
+2 6
+6 7
 1
 
 **/

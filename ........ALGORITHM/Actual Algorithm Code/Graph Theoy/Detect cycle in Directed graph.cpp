@@ -72,6 +72,8 @@ using namespace std;
 vector <int> graph[10000];              /// light oj 1003 Drunk problem ...
 int vis[10000];
 bool cycle;
+map <string,int> mp;
+map <int,string> mp1;
 
 void DFS(int src)
 {
@@ -81,9 +83,9 @@ void DFS(int src)
                                                                                                            soda wine
                                                                                                            water wine
                                                                                                         */
-
     if(vis[src])
     {
+        cerr << "mp1[src]: " << mp1[src] << endl;
         cycle = true;
         return;
     }
@@ -103,13 +105,19 @@ int main()      ///AC
     loop_tcas(tc)
     {
         cin >> E;
-        map <string,int> mp;
+        //map <string,int> mp;
         int x=1;
         while(E--)
         {
             cin >> str1 >> str2;
-            if(mp[str1] == 0) mp[str1] = x++;
-            if(mp[str2] == 0) mp[str2] = x++;
+            if(mp[str1] == 0) {
+                mp1[x] = str1;
+                mp[str1] = x++;
+            }
+            if(mp[str2] == 0){
+                mp1[x] = str2;
+                mp[str2] = x++;
+            }
 
             graph[mp[str1]].push_back(mp[str2]);
         }
@@ -127,6 +135,7 @@ int main()      ///AC
         cycle = false;
 
         for(int i=1; i<x; i++) graph[i].clear();
+        mp.clear();
     }
 
     return 0;

@@ -189,11 +189,11 @@ int main()
     }
 
     bfs(1);
-    cerr << "-->node: " << node << endl;
+    cerr << "-->get first maximum level node: " << node << endl;
     bfs(node);
-    cerr << "--=>node: " << node << endl;
+    cerr << "--=>get actual maximum level node: " << node << endl;
 
-    printf("%d\n",max_level);
+    printf("Maximum possible level in the tree: %d\n",max_level);
 
     return 0 ;
 }

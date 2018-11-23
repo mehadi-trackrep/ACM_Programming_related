@@ -164,9 +164,13 @@ int main()  ///AC , CF - 375A
                 sum = (sum*10 + (s[i]-'0'))%7;
             }
         }
+
+        //cerr << " --> " << sum << endl;
+
         string ss = "1689";
         do
        {
+            cerr << "==>permuted ss: " << ss << endl;
             int sum1=sum;
             fi(i,0,4) sum1 = sum1*10 + (ss[i]-'0');
             //deb(ss);

@@ -231,7 +231,9 @@ int main()  ///AC
         }
         int src = 1;
         dijkstra(src);  /// where source node = 1
+
         int des = n;
+
         if(dist[des] == pinf) pf1(-1);//pf("Not possible\n");
         else
         {

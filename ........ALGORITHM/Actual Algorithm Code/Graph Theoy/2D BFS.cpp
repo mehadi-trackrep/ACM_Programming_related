@@ -94,8 +94,8 @@ template<class T1,class T2,class T3,class T4,class T5,class T6> void deb(T1 e1,T
 
 //int dx[]= {-1,-1,0,0,1,1};
 //int dy[]= {-1,0,-1,1,0,1};
-//int dx[]= {0,0,1,-1};	/*4 side move*/
-//int dy[]= {-1,1,0,0};	/*4 side move*/
+int dx[]= {0,0,1,-1};	/*4 side move*/
+int dy[]= {-1,1,0,0};	/*4 side move*/
 //int dx[]= {1,1,0,-1,-1,-1,0,1};/*8 side move*/
 //int dy[]= {0,1,1,1,0,-1,-1,-1};/*8 side move*/
 //int dx[]={1,1,2,2,-1,-1,-2,-2};/*night move*/
@@ -132,7 +132,7 @@ char graph[sz][sz];
 vector < pair<int,int> >vec;
 int level[sz][sz];
 
-void bfs(int sx,int sy)            ///AC
+void bfs(int sx,int sy)
 {
     fi(i,0,sz)
     fi(j,0,sz) level[i][j] = -1;
@@ -152,7 +152,7 @@ void bfs(int sx,int sy)            ///AC
             int vx=U.first+dx[i];
             int vy=U.second+dy[i];
 
-            if(vx >=1 && vx <=N && vy >=1 && vy <=N && level[vx][vy] == -1 && graph[vx][vy]!='#')
+            if(vx >=1 && vx <=N && vy >=1 && vy <=M && level[vx][vy] == -1 && graph[vx][vy]!='#')
             {
                 vec.pb(make_pair(vx,vy));
                 level[vx][vy] = level[U.first][U.second] + 1;

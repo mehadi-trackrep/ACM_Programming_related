@@ -70,10 +70,11 @@ void map_char()
 void map_string()
 {
     int v=1;
+    string x,y;
 
     for(int i=1; i<=E; i++)
     {
-        string x,y;
+
         cin >> x >> y;
         if(mp1[x] < 1)
             mp1[x] = v++;

@@ -213,7 +213,7 @@ int main()      ///AC
         getchar();
         char piv;
         printf("Case %d:\n",cas);
-        while(q --)
+        while(q--)
         {
            ///cin >> piv; cin not be used :)
            piv = getchar();
